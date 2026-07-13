@@ -429,7 +429,7 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 </div>
 </header>
 <main class="slide-main">
-<div class="rank-focus-bar" aria-hidden="true"><span class="rank-focus-hint">Click card or press Esc to close · ← → to switch · 1–5 to jump</span><button type="button" class="rank-focus-close" aria-label="Close expanded account card">×</button></div>
+<div class="rank-focus-bar" aria-hidden="true"><span class="rank-focus-hint">Click card or press Esc to close</span><button type="button" class="rank-focus-close" aria-label="Close expanded account card">×</button></div>
 <div class="rank-grid">
 <article class="rank-card is-top"><div class="rank-card-intro"><div class="rank-num">1</div><div class="rank-logo-slot"><img class="rank-logo" src="assets/logos/manhattan.jpg" alt="Manhattan Associates"></div></div><div class="company-name">Manhattan Associates</div><div class="industry">Supply chain / commerce SaaS</div><div class="stat-row"><span class="stat"><strong>~1,800</strong> devs (40%)</span><span class="stat"><strong>~$1.1B</strong> rev</span><span class="stat"><strong>4,500</strong> emp</span></div><div class="rank-why-section"><div class="rank-why-kicker">Who they are</div><p>NASDAQ-listed supply chain and commerce software company. The business is shifting from on-prem to <strong>Manhattan Active</strong> — a cloud-native, microservices SaaS suite spanning warehouse, transportation, order management, and omnichannel execution.</p></div><div class="rank-why-section"><div class="rank-why-kicker">2026 strategic priorities</div><p>Accelerate Active adoption across new logos and installed base; sustain cloud subscription growth; commercialize <strong>agentic AI</strong> through Active Agents and Agent Foundry; increase product velocity without weakening security or customer trust.</p></div><div class="rank-why-section"><div class="rank-why-kicker">Where Cursor fits</div><p>Cursor is the <strong>AI coding layer</strong> for a ~1,800-engineer R&amp;D org shipping on a large, complex codebase. Agentic, codebase-aware edits shorten idea-to-production cycle time, accelerate agent delivery, and free roadmap capacity — directly supporting Active releases and AI monetization.</p></div><div class="rank-why-section"><div class="rank-why-kicker">Why #1 in my territory</div><p>Manhattan is betting on <strong>Manhattan Active</strong> and <strong>agentic AI</strong> — every release cycle matters as they migrate off legacy and grow cloud ARR. They need <strong>immediate engineering lift</strong>, not a multi-year tooling build. Cursor cost-effectively multiplies throughput across ~1,800 engineers while they ramp cloud and AI features. Verifone has more seats, but Manhattan has the clearest urgency to ship faster — that&apos;s #1.</p></div></article>
 <article class="rank-card"><div class="rank-card-intro"><div class="rank-num">2</div><div class="rank-logo-slot"><img class="rank-logo" src="assets/logos/verifone.png" alt="Verifone"></div></div><div class="company-name">Verifone</div><div class="industry">Payments technology</div><div class="stat-row"><span class="stat"><strong>~2,200</strong> devs (37%)</span><span class="stat"><strong>~$1.8B+</strong> rev</span><span class="stat"><strong>5,964</strong> emp</span></div><div class="rank-why-section"><div class="rank-why-kicker">Who they are</div><p>Global payments technology company (private, founded 1981) building <strong>Android POS platforms, payment gateways, and merchant integrations</strong> across US and a large Bangalore engineering hub. Software velocity across devices and integrations is how they compete.</p></div><div class="rank-why-section"><div class="rank-why-kicker">2026 strategic priorities</div><p>Ship payment software faster at global scale; expand Android POS and gateway capabilities; embed AI deeper into the SDLC. Public signals: <strong>Developer + AI Innovation hackathons</strong> and leadership stating AI is already deeply embedded in how they build.</p></div><div class="rank-why-section"><div class="rank-why-kicker">Where Cursor fits</div><p>The AI-in-SDLC culture is <strong>pre-sold</strong> — Cursor should be the standard AI coding environment, not a team-level experiment. Land in Praveen Sachwani&apos;s Bangalore AI Innovation Hub, prove cycle-time gains on POS and integration code, then expand across the largest engineer population in my territory (~2,200 seats).</p></div><div class="rank-why-section"><div class="rank-why-kicker">Why #2 in my territory</div><p><strong>Largest seat TAM</strong> and highest long-term expansion ceiling. Ranked behind Manhattan only on exec reachability, not upside. Warm champion identified, hackathon culture creates urgency to turn AI energy into shipped product. Once landed, Verifone may surpass Manhattan in total Cursor consumption — but Manhattan is the faster first win.</p></div></article>
@@ -610,10 +610,6 @@ const openRankFocus = (index) => {
   updateBuilds();
 };
 
-const stepRankFocus = (delta) => {
-  if (rankFocusIndex < 0) return;
-  openRankFocus((rankFocusIndex + delta + rankCards.length) % rankCards.length);
-};
 
 const updateBuilds = () => {
   const accountActive = i === accountSlideIndex;
@@ -653,10 +649,6 @@ const setActive = (n, entry = 'start') => {
 };
 
 const stepForward = () => {
-  if (i === territorySlideIndex && rankFocusIndex >= 0) {
-    closeRankFocus();
-    return;
-  }
   if (i === accountSlideIndex && accountBuildStep < accountCards.length - 1) {
     accountBuildStep += 1;
     updateBuilds();
@@ -671,10 +663,6 @@ const stepForward = () => {
 };
 
 const stepBack = () => {
-  if (i === territorySlideIndex && rankFocusIndex >= 0) {
-    closeRankFocus();
-    return;
-  }
   if (i === accountSlideIndex && accountBuildStep > 0) {
     accountBuildStep -= 1;
     updateBuilds();
@@ -696,28 +684,10 @@ document.querySelector('#prev').addEventListener('click', stepBack);
 document.querySelector('#next').addEventListener('click', stepForward);
 document.querySelector('#fullscreen').addEventListener('click', toggleFullscreen);
 addEventListener('keydown', e => {
-  if (i === territorySlideIndex && rankFocusIndex >= 0) {
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      closeRankFocus();
-      return;
-    }
-    if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      stepRankFocus(1);
-      return;
-    }
-    if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      stepRankFocus(-1);
-      return;
-    }
-    const rankKey = Number(e.key);
-    if (rankKey >= 1 && rankKey <= rankCards.length) {
-      e.preventDefault();
-      openRankFocus(rankKey - 1);
-      return;
-    }
+  if (i === territorySlideIndex && rankFocusIndex >= 0 && e.key === 'Escape') {
+    e.preventDefault();
+    closeRankFocus();
+    return;
   }
   if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
     e.preventDefault();
@@ -725,7 +695,11 @@ addEventListener('keydown', e => {
   } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
     e.preventDefault();
     stepBack();
-  } else if (e.key === 'Home') 
+  } else if (e.key === 'Home') setActive(0);
+  else if (e.key === 'End') setActive(slides.length - 1);
+  else if (e.key === 'f' || e.key === 'F') toggleFullscreen();
+});
+
 rankCards.forEach((card, index) => {
   card.setAttribute('role', 'button');
   card.setAttribute('tabindex', '0');
@@ -745,11 +719,6 @@ rankCards.forEach((card, index) => {
   });
 });
 rankFocusClose?.addEventListener('click', closeRankFocus);
-
-setActive(0);
-  else if (e.key === 'End') setActive(slides.length - 1);
-  else if (e.key === 'f' || e.key === 'F') toggleFullscreen();
-});
 
 document.getElementById('agendaList')?.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-target]');
