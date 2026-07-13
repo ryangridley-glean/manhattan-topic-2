@@ -367,6 +367,43 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 .territory-slide.is-card-focus .rank-card.is-focused .rank-why-kicker { font-size: .52cqw; margin-bottom: .06cqw; }
 .territory-slide.is-card-focus .rank-card.is-focused .rank-why-section p { font-size: .57cqw; line-height: 1.24; overflow: visible; }
 
+
+.messaging-slide .slide-body { inset: 3.2cqw 4.2cqw 2.8cqw; gap: .85cqw; }
+.messaging-slide h1 { font-size: 2.45cqw; max-width: 28ch; }
+.messaging-slide .title-lede { font-size: .82cqw; line-height: 1.32; color: var(--artifact-text-secondary); max-width: 58ch; margin-top: .22cqw; }
+.messaging-slide .slide-main { position: relative; grid-template-columns: minmax(0, 1.15fr) minmax(0, .72fr); gap: .9cqw; align-items: stretch; min-height: 0; }
+.messaging-layout { display: contents; }
+.linkedin-post-panel { display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: .45cqw; min-height: 0; }
+.linkedin-post-frame { cursor: pointer; border: .08cqw solid var(--artifact-border-light); border-radius: .5cqw; background: #fff; overflow: auto; min-height: 0; max-height: 100%; box-shadow: 0 .28cqw .9cqw rgba(15, 23, 42, .06); transition: box-shadow .16s ease, border-color .16s ease; }
+.linkedin-post-frame:hover { border-color: #0a66c2; box-shadow: 0 .35cqw 1.05cqw rgba(10, 102, 194, .14); }
+.linkedin-post-img { width: 100%; height: auto; display: block; }
+.linkedin-post-img + .linkedin-post-img { border-top: .06cqw solid var(--artifact-border-light); }
+.message-open-btn { justify-self: start; border: 0; border-radius: 2.2cqw; padding: .52cqw 1.05cqw; background: #0a66c2; color: #fff; font-size: .72cqw; font-weight: 650; cursor: pointer; box-shadow: 0 .22cqw .65cqw rgba(10, 102, 194, .28); }
+.message-open-btn:hover { background: #004182; }
+.messaging-context { display: grid; align-content: start; gap: .55cqw; min-height: 0; }
+.messaging-context h3 { font-size: .88cqw; font-weight: 650; }
+.messaging-hooks { margin: 0; padding: 0; list-style: none; display: grid; gap: .42cqw; }
+.messaging-hooks li { font-size: .68cqw; line-height: 1.28; color: var(--artifact-text-secondary); padding-left: .72cqw; position: relative; }
+.messaging-hooks li::before { content: ''; position: absolute; left: 0; top: .48em; width: .28cqw; height: .28cqw; border-radius: 50%; background: var(--artifact-primary-brand); }
+.messaging-hooks strong { color: var(--artifact-text-primary); font-weight: 650; }
+.messaging-note { border: .08cqw solid var(--artifact-border-light); border-radius: .45cqw; background: var(--artifact-selected); padding: .55cqw .62cqw; font-size: .62cqw; line-height: 1.3; color: var(--artifact-text-secondary); }
+.message-focus-overlay { display: none; position: absolute; inset: 0; z-index: 15; }
+.message-focus-backdrop { position: absolute; inset: 0; border: 0; padding: 0; margin: 0; background: rgba(15, 23, 42, .48); cursor: pointer; }
+.messaging-slide.is-message-focus .message-focus-overlay { display: block; }
+.linkedin-compose { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 16; width: min(46cqw, 94%); max-height: min(48cqw, 92%); display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; background: #fff; border-radius: .55cqw; border: .08cqw solid #d0d7de; box-shadow: 0 .75cqw 2.2cqw rgba(15, 23, 42, .2); overflow: hidden; }
+.linkedin-compose-head { display: flex; align-items: center; justify-content: space-between; gap: .5cqw; padding: .55cqw .72cqw; border-bottom: .06cqw solid #e8e8e8; background: #fff; }
+.linkedin-compose-title { font-size: .82cqw; font-weight: 650; color: #191919; }
+.message-focus-close { border: 0; background: transparent; color: #666; font-size: 1.1cqw; line-height: 1; cursor: pointer; padding: .1cqw .25cqw; }
+.message-focus-close:hover { color: #191919; }
+.linkedin-compose-to { display: flex; align-items: center; gap: .5cqw; padding: .5cqw .72cqw; border-bottom: .06cqw solid #f0f0f0; }
+.linkedin-avatar { width: 2.1cqw; height: 2.1cqw; border-radius: 50%; background: #0a66c2; color: #fff; display: grid; place-items: center; font-size: .62cqw; font-weight: 700; flex-shrink: 0; }
+.linkedin-compose-to strong { display: block; font-size: .7cqw; color: #191919; line-height: 1.15; }
+.linkedin-compose-to span { display: block; font-size: .56cqw; color: #666; line-height: 1.2; }
+.linkedin-compose-body { padding: .62cqw .72cqw; overflow: auto; display: grid; gap: .42cqw; font-size: .64cqw; line-height: 1.38; color: #191919; }
+.linkedin-compose-body p { margin: 0; }
+.linkedin-compose-foot { display: flex; align-items: center; justify-content: space-between; gap: .55cqw; padding: .5cqw .72cqw; border-top: .06cqw solid #e8e8e8; background: #fafafa; }
+.linkedin-send-btn { border: 0; border-radius: 2cqw; padding: .38cqw .95cqw; background: #0a66c2; color: #fff; font-size: .64cqw; font-weight: 650; opacity: .55; cursor: default; }
+.compose-hint { font-size: .54cqw; color: #666; font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; }
 @media print{.pov-slide .pov-card{opacity:1!important;transform:none!important;filter:none!important;box-shadow:none!important}.pov-slide .pov-card-body,.pov-slide .pov-proof{opacity:1!important}}
 
 </style>
@@ -397,6 +434,7 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 <li><button type="button" class="agenda-item" data-target="5"><span class="agenda-num">3</span><span class="agenda-copy"><strong>Sanjeev Siotia</strong><span>My main target — why him, and how I'd break into a first conversation</span></span></button></li>
 <li><button type="button" class="agenda-item" data-target="3"><span class="agenda-num">4</span><span class="agenda-copy"><strong>Discovery call</strong><span>Strategic priorities mapped to Cursor's POV</span></span></button></li>
 <li><button type="button" class="agenda-item" data-target="9"><span class="agenda-num">5</span><span class="agenda-copy"><strong>Leadership asks</strong><span>Three things I need from Cursor to be successful in this motion</span></span></button></li>
+<li><button type="button" class="agenda-item" data-target="10"><span class="agenda-num">6</span><span class="agenda-copy"><strong>Sample messaging</strong><span>LinkedIn note to Sanjeev tied to his grapes-vs.-vintage post</span></span></button></li>
 </ol>
 </div>
 </main>
@@ -562,6 +600,66 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 <footer class="slide-foot"><span class="source">Sources: supplied Sales Navigator profile; public role records; Manhattan enterprise AI and Agent Foundry strategy.</span><span class="pgnum">07 · TOPIC 2</span></footer>
 </div>
 </section>
+
+<section class="slide messaging-slide" data-slide="sample-messaging">
+<div class="slide-body">
+<header class="slide-head">
+<div class="title-row">
+<div>
+<div class="eyebrow">Break-in motion · Sample messaging</div>
+<h1>Respond to Sanjeev&apos;s post with a ready-to-send note</h1>
+<p class="title-lede">His grapes-vs.-vintage framing maps to how Cursor helps teams operationalize AI in production — not just generate code. Click the post to open the LinkedIn message.</p>
+</div>
+</div>
+</header>
+<main class="slide-main">
+<div class="messaging-layout">
+<div class="linkedin-post-panel">
+<div class="linkedin-post-frame" id="messagePostFrame">
+<img class="linkedin-post-img" src="assets/sanjeev-linkedin-post-top.png" alt="Sanjeev Siotia LinkedIn post about operationalizing AI and grapes versus vintage">
+<img class="linkedin-post-img" src="assets/sanjeev-linkedin-post-bottom.png" alt="Sanjeev Siotia LinkedIn post continued with Think See Do framework">
+</div>
+<button type="button" class="message-open-btn" id="messageOpenBtn">Click for message</button>
+<p class="messaging-note">Esc to close the preview</p>
+</div>
+<aside class="messaging-context">
+<h3>Why this angle works</h3>
+<ul class="messaging-hooks">
+<li><strong>Grapes vs. vintage:</strong> Cursor accelerates the engineering process — reviewed, codebase-aware delivery — not just raw code output.</li>
+<li><strong>Think (model agility):</strong> Developers can work across models without re-architecting Manhattan&apos;s platform spine.</li>
+<li><strong>See (data &amp; security):</strong> Privacy Mode, SSO, and enterprise controls match his security-beyond-ACLs bar.</li>
+<li><strong>Do (deterministic spine):</strong> Human-in-the-loop review on multi-file changes before they hit your APIs and release train.</li>
+</ul>
+</aside>
+</div>
+<div class="message-focus-overlay" aria-hidden="true">
+<button type="button" class="message-focus-backdrop" aria-label="Close message preview"></button>
+<div class="linkedin-compose" role="dialog" aria-modal="true" aria-labelledby="messageComposeTitle">
+<div class="linkedin-compose-head">
+<div class="linkedin-compose-title" id="messageComposeTitle">New message</div>
+<button type="button" class="message-focus-close" aria-label="Close message preview">×</button>
+</div>
+<div class="linkedin-compose-to">
+<div class="linkedin-avatar" aria-hidden="true">SS</div>
+<div><strong>Sanjeev Siotia</strong><span>EVP, Chief Technology Officer at Manhattan Associates</span></div>
+</div>
+<div class="linkedin-compose-body">
+<p>Hi Sanjeev,</p>
+<p>Your post on grapes vs. vintage really landed — especially the point that code generation is becoming cheap, but enterprise value comes from the process behind it. That&apos;s the exact tension we see with large R&amp;D orgs operationalizing AI in the SDLC.</p>
+<p>Where Cursor maps to your Think–See–Do framing: we help engineers ship the <strong>deterministic spine</strong> faster — multi-file, codebase-aware changes with review before merge — while keeping <strong>model agility</strong> on the developer side. Enterprise controls (SSO, Privacy Mode, no training on your code) are built for the security bar you described.</p>
+<p>Would you be open to a 20-minute conversation on how peers in complex cloud SaaS environments are turning AI coding into governed engineering throughput for platform and agentic roadmap work — not another shiny demo?</p>
+<p>Best,<br>Ryan</p>
+</div>
+<div class="linkedin-compose-foot">
+<button type="button" class="linkedin-send-btn" disabled aria-disabled="true">Send</button>
+<span class="compose-hint">Preview — copy into LinkedIn to send</span>
+</div>
+</div>
+</div>
+</main>
+<footer class="slide-foot"><span class="source">Source: Sanjeev Siotia LinkedIn post (public); message draft aligned to Cursor enterprise positioning</span><span class="pgnum">11</span></footer>
+</div>
+</section>
 </div>
 </div>
 <div aria-label="Slide controls" class="controls"><button aria-label="Previous build or slide" class="control-btn" id="prev">←</button><span aria-live="polite" id="counter" role="status"></span><button aria-label="Next build or slide" class="control-btn" id="next">→</button><button class="control-btn" id="fullscreen">Fullscreen</button></div>
@@ -616,6 +714,31 @@ const openRankFocus = (index) => {
   updateBuilds();
 };
 
+const messagingSlide = document.querySelector('.messaging-slide');
+const messagingSlideIndex = slides.indexOf(messagingSlide);
+const messageFocusOverlay = messagingSlide?.querySelector('.message-focus-overlay');
+const messageFocusBackdrop = messagingSlide?.querySelector('.message-focus-backdrop');
+const messageFocusClose = messagingSlide?.querySelector('.message-focus-close');
+const messageOpenBtn = messagingSlide?.querySelector('#messageOpenBtn');
+const messagePostFrame = messagingSlide?.querySelector('#messagePostFrame');
+let messageFocusOpen = false;
+
+const closeMessageFocus = () => {
+  if (!messageFocusOpen) return;
+  messageFocusOpen = false;
+  messagingSlide?.classList.remove('is-message-focus');
+  messageFocusOverlay?.setAttribute('aria-hidden', 'true');
+  updateBuilds();
+};
+
+const openMessageFocus = () => {
+  if (!messagingSlide || i !== messagingSlideIndex) return;
+  messageFocusOpen = true;
+  messagingSlide.classList.add('is-message-focus');
+  messageFocusOverlay?.setAttribute('aria-hidden', 'false');
+  updateBuilds();
+};
+
 
 const updateBuilds = () => {
   const accountActive = i === accountSlideIndex;
@@ -646,6 +769,7 @@ const updateBuilds = () => {
 
 const setActive = (n, entry = 'start') => {
   if (n !== territorySlideIndex) closeRankFocus();
+  if (n !== messagingSlideIndex) closeMessageFocus();
   i = Math.max(0, Math.min(slides.length - 1, n));
   if (i === accountSlideIndex) accountBuildStep = entry === 'end' ? accountCards.length - 1 : 0;
   if (i === povSlideIndex) povBuildStep = entry === 'end' ? povCards.length - 1 : 0;
@@ -695,6 +819,11 @@ addEventListener('keydown', e => {
     closeRankFocus();
     return;
   }
+  if (i === messagingSlideIndex && messageFocusOpen && e.key === 'Escape') {
+    e.preventDefault();
+    closeMessageFocus();
+    return;
+  }
   if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
     e.preventDefault();
     stepForward();
@@ -726,6 +855,11 @@ rankCards.forEach((card, index) => {
 });
 rankFocusClose?.addEventListener('click', closeRankFocus);
 rankFocusBackdrop?.addEventListener('click', closeRankFocus);
+
+messageOpenBtn?.addEventListener('click', openMessageFocus);
+messagePostFrame?.addEventListener('click', openMessageFocus);
+messageFocusClose?.addEventListener('click', closeMessageFocus);
+messageFocusBackdrop?.addEventListener('click', closeMessageFocus);
 
 document.getElementById('agendaList')?.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-target]');
