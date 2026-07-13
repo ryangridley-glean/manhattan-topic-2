@@ -399,6 +399,14 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 .messaging-hooks li::before { content: ''; position: absolute; left: 0; top: .48em; width: .34cqw; height: .34cqw; border-radius: 50%; background: var(--artifact-primary-brand); }
 .messaging-hooks strong { color: var(--artifact-text-primary); font-weight: 650; font-size: .82cqw; }
 .messaging-note { border: .08cqw solid var(--artifact-border-light); border-radius: .45cqw; background: var(--artifact-selected); padding: .68cqw .75cqw; font-size: .72cqw; line-height: 1.34; color: var(--artifact-text-secondary); }
+.messaging-research { display: grid; gap: .28cqw; }
+.messaging-research-label { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .56cqw; letter-spacing: .08em; text-transform: uppercase; color: var(--artifact-primary-brand); }
+.messaging-research-summary { margin: 0; font-size: .68cqw; line-height: 1.32; color: var(--artifact-text-secondary); }
+.messaging-research-links { margin: 0; padding: 0; list-style: none; display: grid; gap: .22cqw; }
+.messaging-research-links a { font-size: .66cqw; line-height: 1.28; color: #0a66c2; text-decoration: none; }
+.messaging-research-links a:hover { text-decoration: underline; }
+.linkedin-compose-body a { color: #0a66c2; text-decoration: none; }
+.linkedin-compose-body a:hover { text-decoration: underline; }
 .message-focus-overlay { display: none; position: absolute; inset: 0; z-index: 15; }
 .message-focus-backdrop { position: absolute; inset: 0; border: 0; padding: 0; margin: 0; background: rgba(15, 23, 42, .48); cursor: pointer; }
 .messaging-slide.is-message-focus .message-focus-overlay { display: block; }
@@ -652,12 +660,22 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 <p class="messaging-legend">Yellow = lines echoed in the message below</p>
 </div>
 <aside class="messaging-context">
+<h3>What they&apos;re building</h3>
+<p class="messaging-research-summary"><strong>Manhattan Active</strong> is the cloud-native platform for warehouse, transportation, and order management. <strong>Active Agents</strong> (GA Jan 2026) embed autonomous AI inside that platform — agents that act on live operational data, not a bolt-on layer. <strong>Agent Foundry</strong> lets customers and developers build and customize those agents in plain language or with APIs — the factory behind Manhattan&apos;s agentic AI bet.</p>
 <h3>Tied to his technology priorities</h3>
 <ul class="messaging-hooks">
-<li><strong>Commercialize agentic AI:</strong> Move Active Agents and Agent Foundry from concept to production software — faster iteration on the codebase behind it.</li>
-<li><strong>Protect architecture quality:</strong> Keep human review, security, and reliability in place as engineering speed increases.</li>
-<li><strong>Accelerate cloud innovation:</strong> More R&amp;D throughput on Manhattan Active while the installed base moves to cloud.</li>
+<li><strong>Commercialize agentic AI:</strong> Ship ready-to-work Active Agents and help customers build their own in Agent Foundry — labor, wave, dock, and workflow automation inside Manhattan Active.</li>
+<li><strong>Protect architecture quality:</strong> Agents run with guardrails, approved APIs, and auditability as engineering speed increases.</li>
+<li><strong>Accelerate cloud innovation:</strong> More R&amp;D throughput on Manhattan Active and agent capabilities while the installed base moves to cloud.</li>
 </ul>
+<div class="messaging-research">
+<p class="messaging-research-label">Research links</p>
+<ul class="messaging-research-links">
+<li><a href="https://www.manh.com/solutions/manhattan-active-platform" target="_blank" rel="noopener noreferrer">Manhattan Active</a></li>
+<li><a href="https://www.manh.com/solutions/manhattan-active-platform/manhattan-active-agents" target="_blank" rel="noopener noreferrer">Manhattan Active Agents</a></li>
+<li><a href="https://www.manh.com/solutions/manhattan-active-platform/build-ai-agents-agent-foundry" target="_blank" rel="noopener noreferrer">Agent Foundry</a></li>
+</ul>
+</div>
 <p class="messaging-note">Ask: 30-minute working conversation — your POV on how Cursor supports these, not a slide deck.</p>
 </aside>
 </div>
@@ -675,8 +693,9 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 <div class="linkedin-compose-body">
 <p>Hi Sanjeev,</p>
 <p>Your post on grapes vs. vintage stuck with me — especially that code generation is getting cheap, but the real value is in the process behind it. And that we shouldn&apos;t confuse generating code with delivering a business outcome.</p>
-<p>From where I sit, that lines up with what Manhattan&apos;s technology organization is driving: getting agentic AI into production, keeping architecture and security strong as the engineering org moves faster, and accelerating Manhattan Active at scale.</p>
-<p>I&apos;d love 30 minutes to walk through my point of view on how Cursor could help on those fronts — and hear how you&apos;re thinking about engineering productivity across the org. Happy to keep it practical, not a pitch deck.</p>
+<p>From where I sit, that lines up with what you&apos;re building on <strong>Manhattan Active</strong> — embedding <strong>Active Agents</strong> directly in the platform so they can act on live warehouse and transportation work, and giving customers a way to build their own through <strong>Agent Foundry</strong>. That&apos;s the kind of &ldquo;vintage&rdquo; your post describes: governed, production AI inside the product, not just more code.</p>
+<p>I&apos;d love 30 minutes to walk through my point of view on how Cursor could help your engineering org ship that roadmap faster — and hear how you&apos;re thinking about productivity across R&amp;D. Happy to keep it practical, not a pitch deck.</p>
+<p>Research: <a href="https://www.manh.com/solutions/manhattan-active-platform" target="_blank" rel="noopener noreferrer">Manhattan Active</a> · <a href="https://www.manh.com/solutions/manhattan-active-platform/manhattan-active-agents" target="_blank" rel="noopener noreferrer">Manhattan Active Agents</a> · <a href="https://www.manh.com/solutions/manhattan-active-platform/build-ai-agents-agent-foundry" target="_blank" rel="noopener noreferrer">Agent Foundry</a></p>
 <p>Would you be open to finding time in the next couple of weeks?</p>
 <p>Best,<br>Ryan</p>
 </div>
@@ -687,7 +706,7 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 </div>
 </div>
 </main>
-<footer class="slide-foot"><span class="source">Source: Sanjeev Siotia LinkedIn post (public); message draft aligned to Cursor enterprise positioning</span><span class="pgnum">11</span></footer>
+<footer class="slide-foot"><span class="source">Sources: Sanjeev Siotia LinkedIn post; Manhattan Active Platform, Active Agents (Jan 2026 GA), and Agent Foundry product pages (manh.com)</span><span class="pgnum">11</span></footer>
 </div>
 </section>
 </div>
