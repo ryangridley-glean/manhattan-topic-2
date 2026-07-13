@@ -344,27 +344,28 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 
 .rank-card { cursor: pointer; transition: box-shadow .18s ease; }
 .rank-card:hover:not(.is-focused) { box-shadow: 0 .28cqw .85cqw rgba(15, 23, 42, .09); }
-.rank-focus-bar { display: none; align-items: center; justify-content: space-between; gap: .5cqw; padding: 0 .1cqw .12cqw; flex-shrink: 0; }
-.rank-focus-hint { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .54cqw; color: var(--artifact-text-secondary); letter-spacing: .02em; }
-.rank-focus-close { flex: 0 0 auto; width: 1.35cqw; height: 1.35cqw; border: .06cqw solid var(--artifact-border-light); border-radius: .32cqw; background: var(--artifact-background-light); color: var(--artifact-text-secondary); font-size: .9cqw; line-height: 1; cursor: pointer; }
+.rank-focus-overlay { display: none; position: absolute; inset: 0; z-index: 12; }
+.rank-focus-backdrop { position: absolute; inset: 0; border: 0; padding: 0; margin: 0; background: rgba(15, 23, 42, .42); cursor: pointer; }
+.rank-focus-bar { display: none; position: absolute; top: .42cqw; right: .42cqw; z-index: 14; align-items: center; gap: .35cqw; pointer-events: none; }
+.rank-focus-hint { display: none; }
+.rank-focus-close { pointer-events: auto; flex: 0 0 auto; width: 1.35cqw; height: 1.35cqw; border: .06cqw solid var(--artifact-border-light); border-radius: .32cqw; background: var(--artifact-background-light); color: var(--artifact-text-secondary); font-size: .9cqw; line-height: 1; cursor: pointer; box-shadow: 0 .18cqw .55cqw rgba(15, 23, 42, .12); }
 .rank-focus-close:hover { color: var(--artifact-text-primary); border-color: var(--artifact-border-dark); }
-.territory-slide.is-card-focus .territory-head { display: none; }
-.territory-slide.is-card-focus .rank-rationale { display: none; }
-.territory-slide.is-card-focus .slide-main { grid-template-rows: auto 1fr; gap: .28cqw; }
+.territory-slide.is-card-focus .slide-main { position: relative; overflow: visible; }
+.territory-slide.is-card-focus .rank-focus-overlay { display: block; }
 .territory-slide.is-card-focus .rank-focus-bar { display: flex; }
-.territory-slide.is-card-focus .rank-grid { grid-template-columns: 1fr; grid-template-rows: 1fr; column-gap: 0; row-gap: 0; }
-.territory-slide.is-card-focus .rank-card:not(.is-focused) { display: none; }
-.territory-slide.is-card-focus .rank-card.is-focused { display: grid; grid-template-rows: auto auto auto auto repeat(4, minmax(0, 1fr)); grid-row: auto; grid-column: 1; height: 100%; padding: .9cqw 1cqw; overflow: auto; cursor: default; box-shadow: 0 .45cqw 1.45cqw rgba(15, 23, 42, .11); }
-.territory-slide.is-card-focus .rank-card.is-focused .rank-card-intro { max-height: 3.5cqw; }
-.territory-slide.is-card-focus .rank-card.is-focused .rank-logo-slot { height: 2.95cqw; }
-.territory-slide.is-card-focus .rank-card.is-focused .rank-num { width: 1.95cqw; height: 1.95cqw; font-size: .98cqw; }
-.territory-slide.is-card-focus .rank-card.is-focused .company-name { font-size: 1.32cqw; }
-.territory-slide.is-card-focus .rank-card.is-focused .industry { font-size: .7cqw; }
-.territory-slide.is-card-focus .rank-card.is-focused .stat { font-size: .66cqw; }
-.territory-slide.is-card-focus .rank-card.is-focused .stat strong { font-size: .7cqw; }
-.territory-slide.is-card-focus .rank-card.is-focused .rank-why-kicker { font-size: .6cqw; }
-.territory-slide.is-card-focus .rank-card.is-focused .rank-why-section { overflow: visible; }
-.territory-slide.is-card-focus .rank-card.is-focused .rank-why-section p { font-size: .66cqw; line-height: 1.3; overflow: visible; }
+.territory-slide.is-card-focus .rank-grid { visibility: hidden; pointer-events: none; }
+.territory-slide.is-card-focus .rank-card.is-focused { visibility: visible; pointer-events: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 13; display: grid; grid-template-rows: auto; grid-auto-rows: auto; grid-row: auto; grid-column: auto; width: min(62cqw, 96%); max-height: 50cqw; height: auto; padding: .72cqw .82cqw; gap: .14cqw; overflow: auto; cursor: default; border-radius: .58cqw; box-shadow: 0 .65cqw 2cqw rgba(15, 23, 42, .18); align-content: start; }
+.territory-slide.is-card-focus .rank-card.is-focused .rank-card-intro { max-height: none; height: auto; margin-bottom: .04cqw; }
+.territory-slide.is-card-focus .rank-card.is-focused .rank-logo-slot { height: 2.15cqw; }
+.territory-slide.is-card-focus .rank-card.is-focused .rank-num { width: 1.55cqw; height: 1.55cqw; font-size: .78cqw; }
+.territory-slide.is-card-focus .rank-card.is-focused .company-name { font-size: 1.02cqw; }
+.territory-slide.is-card-focus .rank-card.is-focused .industry { font-size: .58cqw; }
+.territory-slide.is-card-focus .rank-card.is-focused .stat-row { padding-bottom: .12cqw; margin-bottom: .04cqw; }
+.territory-slide.is-card-focus .rank-card.is-focused .stat { font-size: .56cqw; }
+.territory-slide.is-card-focus .rank-card.is-focused .stat strong { font-size: .58cqw; }
+.territory-slide.is-card-focus .rank-card.is-focused .rank-why-section { display: block; height: auto; min-height: 0; padding-top: .1cqw; overflow: visible; }
+.territory-slide.is-card-focus .rank-card.is-focused .rank-why-kicker { font-size: .52cqw; margin-bottom: .06cqw; }
+.territory-slide.is-card-focus .rank-card.is-focused .rank-why-section p { font-size: .57cqw; line-height: 1.24; overflow: visible; }
 
 @media print{.pov-slide .pov-card{opacity:1!important;transform:none!important;filter:none!important;box-shadow:none!important}.pov-slide .pov-card-body,.pov-slide .pov-proof{opacity:1!important}}
 
@@ -429,7 +430,8 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 </div>
 </header>
 <main class="slide-main">
-<div class="rank-focus-bar" aria-hidden="true"><span class="rank-focus-hint">Click card or press Esc to close</span><button type="button" class="rank-focus-close" aria-label="Close expanded account card">×</button></div>
+<div class="rank-focus-overlay" aria-hidden="true"><button type="button" class="rank-focus-backdrop" aria-label="Close expanded account card"></button></div>
+<div class="rank-focus-bar" aria-hidden="true"><button type="button" class="rank-focus-close" aria-label="Close expanded account card">×</button></div>
 <div class="rank-grid">
 <article class="rank-card is-top"><div class="rank-card-intro"><div class="rank-num">1</div><div class="rank-logo-slot"><img class="rank-logo" src="assets/logos/manhattan.jpg" alt="Manhattan Associates"></div></div><div class="company-name">Manhattan Associates</div><div class="industry">Supply chain / commerce SaaS</div><div class="stat-row"><span class="stat"><strong>~1,800</strong> devs (40%)</span><span class="stat"><strong>~$1.1B</strong> rev</span><span class="stat"><strong>4,500</strong> emp</span></div><div class="rank-why-section"><div class="rank-why-kicker">Who they are</div><p>NASDAQ-listed supply chain and commerce software company. The business is shifting from on-prem to <strong>Manhattan Active</strong> — a cloud-native, microservices SaaS suite spanning warehouse, transportation, order management, and omnichannel execution.</p></div><div class="rank-why-section"><div class="rank-why-kicker">2026 strategic priorities</div><p>Accelerate Active adoption across new logos and installed base; sustain cloud subscription growth; commercialize <strong>agentic AI</strong> through Active Agents and Agent Foundry; increase product velocity without weakening security or customer trust.</p></div><div class="rank-why-section"><div class="rank-why-kicker">Where Cursor fits</div><p>Cursor is the <strong>AI coding layer</strong> for a ~1,800-engineer R&amp;D org shipping on a large, complex codebase. Agentic, codebase-aware edits shorten idea-to-production cycle time, accelerate agent delivery, and free roadmap capacity — directly supporting Active releases and AI monetization.</p></div><div class="rank-why-section"><div class="rank-why-kicker">Why #1 in my territory</div><p>Manhattan is betting on <strong>Manhattan Active</strong> and <strong>agentic AI</strong> — every release cycle matters as they migrate off legacy and grow cloud ARR. They need <strong>immediate engineering lift</strong>, not a multi-year tooling build. Cursor cost-effectively multiplies throughput across ~1,800 engineers while they ramp cloud and AI features. Verifone has more seats, but Manhattan has the clearest urgency to ship faster — that&apos;s #1.</p></div></article>
 <article class="rank-card"><div class="rank-card-intro"><div class="rank-num">2</div><div class="rank-logo-slot"><img class="rank-logo" src="assets/logos/verifone.png" alt="Verifone"></div></div><div class="company-name">Verifone</div><div class="industry">Payments technology</div><div class="stat-row"><span class="stat"><strong>~2,200</strong> devs (37%)</span><span class="stat"><strong>~$1.8B+</strong> rev</span><span class="stat"><strong>5,964</strong> emp</span></div><div class="rank-why-section"><div class="rank-why-kicker">Who they are</div><p>Global payments technology company (private, founded 1981) building <strong>Android POS platforms, payment gateways, and merchant integrations</strong> across US and a large Bangalore engineering hub. Software velocity across devices and integrations is how they compete.</p></div><div class="rank-why-section"><div class="rank-why-kicker">2026 strategic priorities</div><p>Ship payment software faster at global scale; expand Android POS and gateway capabilities; embed AI deeper into the SDLC. Public signals: <strong>Developer + AI Innovation hackathons</strong> and leadership stating AI is already deeply embedded in how they build.</p></div><div class="rank-why-section"><div class="rank-why-kicker">Where Cursor fits</div><p>The AI-in-SDLC culture is <strong>pre-sold</strong> — Cursor should be the standard AI coding environment, not a team-level experiment. Land in Praveen Sachwani&apos;s Bangalore AI Innovation Hub, prove cycle-time gains on POS and integration code, then expand across the largest engineer population in my territory (~2,200 seats).</p></div><div class="rank-why-section"><div class="rank-why-kicker">Why #2 in my territory</div><p><strong>Largest seat TAM</strong> and highest long-term expansion ceiling. Ranked behind Manhattan only on exec reachability, not upside. Warm champion identified, hackathon culture creates urgency to turn AI energy into shipped product. Once landed, Verifone may surpass Manhattan in total Cursor consumption — but Manhattan is the faster first win.</p></div></article>
@@ -581,6 +583,8 @@ let povBuildStep = 0;
 const territorySlide = document.querySelector('.territory-slide');
 const territorySlideIndex = slides.indexOf(territorySlide);
 const rankCards = territorySlide ? [...territorySlide.querySelectorAll('.rank-card')] : [];
+const rankFocusOverlay = territorySlide?.querySelector('.rank-focus-overlay');
+const rankFocusBackdrop = territorySlide?.querySelector('.rank-focus-backdrop');
 const rankFocusBar = territorySlide?.querySelector('.rank-focus-bar');
 const rankFocusClose = territorySlide?.querySelector('.rank-focus-close');
 let rankFocusIndex = -1;
@@ -593,6 +597,7 @@ const closeRankFocus = () => {
     card.classList.remove('is-focused');
     card.setAttribute('aria-expanded', 'false');
   });
+  rankFocusOverlay?.setAttribute('aria-hidden', 'true');
   rankFocusBar?.setAttribute('aria-hidden', 'true');
   updateBuilds();
 };
@@ -606,6 +611,7 @@ const openRankFocus = (index) => {
     card.classList.toggle('is-focused', focused);
     card.setAttribute('aria-expanded', String(focused));
   });
+  rankFocusOverlay?.setAttribute('aria-hidden', 'false');
   rankFocusBar?.setAttribute('aria-hidden', 'false');
   updateBuilds();
 };
@@ -719,6 +725,7 @@ rankCards.forEach((card, index) => {
   });
 });
 rankFocusClose?.addEventListener('click', closeRankFocus);
+rankFocusBackdrop?.addEventListener('click', closeRankFocus);
 
 document.getElementById('agendaList')?.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-target]');
