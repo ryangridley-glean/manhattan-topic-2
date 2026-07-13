@@ -317,16 +317,20 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 .territory-framework li { font-size: .66cqw; color: var(--artifact-text-primary); padding-left: .88cqw; position: relative; line-height: 1.28; }
 .territory-framework li::before { content: ''; position: absolute; left: 0; top: .42em; width: .36cqw; height: .36cqw; border-radius: 50%; background: var(--artifact-primary-brand); }
 .rank-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .68cqw; min-height: 0; align-content: stretch; }
-.rank-card { border: .08cqw solid var(--artifact-border-light); border-radius: .55cqw; background: var(--artifact-background-light); padding: .72cqw .7cqw; display: grid; grid-template-rows: auto auto auto minmax(0, 1fr); gap: .42cqw; min-width: 0; border-top: .22cqw solid var(--artifact-primary-brand); }
+.rank-card { border: .08cqw solid var(--artifact-border-light); border-radius: .55cqw; background: var(--artifact-background-light); padding: .72cqw .7cqw; display: grid; grid-template-rows: auto auto auto minmax(0, 1fr); gap: .34cqw; min-width: 0; border-top: .22cqw solid var(--artifact-primary-brand); }
 .rank-card.is-top { background: var(--artifact-surface); box-shadow: 0 .45cqw 1.35cqw rgba(15, 23, 42, .07); }
 .rank-card-intro { display: flex; align-items: center; justify-content: space-between; gap: .45cqw; min-width: 0; }
 .rank-logo { height: 1.42cqw; width: auto; max-width: 72%; object-fit: contain; object-position: left center; display: block; flex: 1 1 auto; min-width: 0; }
 .rank-card.is-top .rank-logo { height: 1.5cqw; }
+.rank-card:nth-child(1) .rank-logo,
+.rank-card:nth-child(2) .rank-logo,
+.rank-card:nth-child(4) .rank-logo { height: 2.35cqw; max-width: 88%; }
+.rank-card.is-top .rank-logo { height: 2.45cqw; }
 .rank-num { width: 1.5cqw; height: 1.5cqw; border-radius: 50%; display: grid; place-items: center; background: var(--artifact-primary-brand); color: var(--artifact-text-inverse); font-size: .76cqw; font-weight: 700; }
 .company-name { font-size: .98cqw; font-weight: 650; line-height: 1.1; color: var(--artifact-text-primary); }
 .industry { font-size: .62cqw; color: var(--artifact-primary-brand); text-transform: uppercase; letter-spacing: .08em; font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; }
-.stat-row { display: grid; gap: .22cqw; }
-.stat { font-size: .64cqw; line-height: 1.24; color: var(--artifact-text-secondary); }
+.stat-row { display: grid; gap: .06cqw; }
+.stat { font-size: .64cqw; line-height: 1.12; color: var(--artifact-text-secondary); }
 .stat strong { font-size: .7cqw; color: var(--artifact-text-primary); }
 .rank-card ul { margin: 0; padding-left: .95cqw; display: grid; gap: .22cqw; }
 .rank-card li { font-size: .58cqw; line-height: 1.26; color: var(--artifact-text-secondary); }
