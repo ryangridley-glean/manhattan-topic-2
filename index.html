@@ -307,38 +307,41 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 .agenda-hint { font-size: .76cqw; color: var(--artifact-text-secondary); margin-top: .55cqw; }
 
 /* Territory ranking slide */
-.territory-slide .slide-body { inset: 3.05cqw 4.5cqw 2.75cqw; gap: .72cqw; }
-.territory-slide .slide-main { grid-template-rows: minmax(0, 1fr) auto; align-content: stretch; gap: .42cqw; min-height: 0; overflow: hidden; }
-.territory-slide h1 { max-width: none; font-size: 2.72cqw; font-weight: 300; line-height: 1.05; }
-.territory-slide .title-lede { font-size: .8cqw; line-height: 1.3; color: var(--artifact-text-secondary); max-width: 52ch; margin-top: .28cqw; }
-.territory-slide .eyebrow { margin-bottom: .1cqw; }
-.territory-logo-row { margin-bottom: -.28cqw; }
-.territory-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .9cqw; align-items: start; }
-.territory-framework { border: .08cqw solid var(--artifact-border-light); background: var(--artifact-selected); border-radius: .5cqw; padding: .52cqw .64cqw; min-width: 16cqw; }
-.territory-framework .label { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .58cqw; letter-spacing: .12em; text-transform: uppercase; color: var(--artifact-primary-brand); margin-bottom: .3cqw; }
-.territory-framework ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .18cqw; }
-.territory-framework li { font-size: .6cqw; color: var(--artifact-text-primary); padding-left: .8cqw; position: relative; line-height: 1.22; }
-.territory-framework li::before { content: ''; position: absolute; left: 0; top: .42em; width: .32cqw; height: .32cqw; border-radius: 50%; background: var(--artifact-primary-brand); }
-.rank-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-template-rows: 2.45cqw minmax(.98cqw, auto) minmax(.62cqw, auto) minmax(.76cqw, auto) .9fr .94fr .94fr 1.22fr; column-gap: .62cqw; row-gap: .14cqw; min-height: 0; height: 100%; align-content: stretch; }
-.rank-card { border: .08cqw solid var(--artifact-border-light); border-radius: .5cqw; background: var(--artifact-background-light); padding: .52cqw .56cqw; display: grid; grid-template-rows: subgrid; grid-row: 1 / -1; gap: 0; min-width: 0; min-height: 0; overflow: hidden; border-top: .2cqw solid var(--artifact-primary-brand); }
+.territory-slide .slide-body { inset: 2.15cqw 4.5cqw 2.45cqw; gap: .38cqw; }
+.territory-slide .slide-head { gap: .28cqw; margin-bottom: -.12cqw; }
+.territory-slide .slide-main { grid-template-rows: minmax(0, 1fr) auto; align-content: stretch; gap: .28cqw; min-height: 0; overflow: hidden; }
+.territory-slide h1 { max-width: none; font-size: 2.15cqw; font-weight: 300; line-height: 1.02; }
+.territory-slide .title-lede { font-size: .64cqw; line-height: 1.26; color: var(--artifact-text-secondary); max-width: 62ch; margin-top: .14cqw; }
+.territory-slide .eyebrow { margin-bottom: .04cqw; font-size: .58cqw; }
+.territory-logo-row { margin-bottom: -.42cqw; }
+.territory-logo-row .brand .cursor-logo { max-height: 1.35cqw; }
+.territory-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .65cqw; align-items: start; }
+.territory-framework { border: .08cqw solid var(--artifact-border-light); background: var(--artifact-selected); border-radius: .45cqw; padding: .38cqw .5cqw; min-width: 14.5cqw; }
+.territory-framework .label { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .5cqw; letter-spacing: .1em; text-transform: uppercase; color: var(--artifact-primary-brand); margin-bottom: .22cqw; }
+.territory-framework ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .12cqw; }
+.territory-framework li { font-size: .52cqw; color: var(--artifact-text-primary); padding-left: .68cqw; position: relative; line-height: 1.18; }
+.territory-framework li::before { content: ''; position: absolute; left: 0; top: .42em; width: .28cqw; height: .28cqw; border-radius: 50%; background: var(--artifact-primary-brand); }
+.rank-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-template-rows: 1.85cqw auto auto auto 1.05fr 1.1fr 1.1fr 1.45fr; column-gap: .55cqw; row-gap: .1cqw; min-height: 0; height: 100%; align-content: stretch; }
+.rank-card { border: .08cqw solid var(--artifact-border-light); border-radius: .48cqw; background: var(--artifact-background-light); padding: .44cqw .5cqw; display: grid; grid-template-rows: subgrid; grid-row: 1 / -1; gap: 0; min-width: 0; min-height: 0; overflow: hidden; border-top: .18cqw solid var(--artifact-primary-brand); }
 .rank-card.is-top { background: var(--artifact-surface); box-shadow: 0 .45cqw 1.35cqw rgba(15, 23, 42, .07); }
-.rank-card-intro { display: flex; align-items: center; gap: .38cqw; min-width: 0; height: 100%; max-height: 2.45cqw; }
-.rank-logo-slot { flex: 1 1 auto; height: 2.05cqw; min-width: 0; display: flex; align-items: center; }
+.rank-card-intro { display: flex; align-items: center; gap: .32cqw; min-width: 0; height: 100%; max-height: 1.85cqw; }
+.rank-logo-slot { flex: 1 1 auto; height: 1.55cqw; min-width: 0; display: flex; align-items: center; }
 .rank-logo { height: 100%; width: auto; max-width: 100%; object-fit: contain; object-position: left center; display: block; }
-.rank-num { flex: 0 0 auto; width: 1.38cqw; height: 1.38cqw; border-radius: 50%; display: grid; place-items: center; background: var(--artifact-primary-brand); color: var(--artifact-text-inverse); font-size: .72cqw; font-weight: 700; }
-.company-name { font-size: .88cqw; font-weight: 650; line-height: 1.08; color: var(--artifact-text-primary); align-self: center; min-height: 0; }
-.industry { font-size: .52cqw; color: var(--artifact-primary-brand); text-transform: uppercase; letter-spacing: .06em; font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; line-height: 1.1; align-self: center; min-height: 0; }
-.stat-row { display: flex; flex-wrap: nowrap; align-items: baseline; gap: .14cqw .18cqw; margin: 0; padding: 0 0 .08cqw; border-bottom: .06cqw solid var(--artifact-border-light); align-self: center; min-height: 0; }
-.stat { font-size: .5cqw; line-height: 1.06; color: var(--artifact-text-secondary); white-space: nowrap; }
-.stat strong { font-size: .52cqw; color: var(--artifact-text-primary); font-weight: 650; }
-.rank-why-section { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: .08cqw; min-width: 0; min-height: 0; height: 100%; align-self: stretch; padding-top: .06cqw; overflow: hidden; }
-.rank-why-kicker { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .46cqw; letter-spacing: .09em; text-transform: uppercase; color: var(--artifact-primary-brand); line-height: 1.08; flex-shrink: 0; }
-.rank-why-section p { margin: 0; font-size: .49cqw; line-height: 1.16; color: var(--artifact-text-secondary); overflow: hidden; }
+.rank-num { flex: 0 0 auto; width: 1.2cqw; height: 1.2cqw; border-radius: 50%; display: grid; place-items: center; background: var(--artifact-primary-brand); color: var(--artifact-text-inverse); font-size: .62cqw; font-weight: 700; }
+.company-name { font-size: .76cqw; font-weight: 650; line-height: 1.06; color: var(--artifact-text-primary); align-self: center; min-height: 0; }
+.industry { font-size: .46cqw; color: var(--artifact-primary-brand); text-transform: uppercase; letter-spacing: .05em; font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; line-height: 1.08; align-self: center; min-height: 0; }
+.stat-row { display: flex; flex-wrap: nowrap; align-items: baseline; gap: .1cqw .14cqw; margin: 0; padding: 0 0 .06cqw; border-bottom: .06cqw solid var(--artifact-border-light); align-self: center; min-height: 0; }
+.stat { font-size: .44cqw; line-height: 1.04; color: var(--artifact-text-secondary); white-space: nowrap; }
+.stat strong { font-size: .46cqw; color: var(--artifact-text-primary); font-weight: 650; }
+.rank-why-section { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: .06cqw; min-width: 0; min-height: 0; height: 100%; align-self: stretch; padding-top: .04cqw; overflow: hidden; }
+.rank-why-kicker { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .42cqw; letter-spacing: .08em; text-transform: uppercase; color: var(--artifact-primary-brand); line-height: 1.06; flex-shrink: 0; }
+.rank-why-section p { margin: 0; font-size: .46cqw; line-height: 1.14; color: var(--artifact-text-secondary); overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 12; line-clamp: 12; }
+.rank-why-section:last-child p { -webkit-line-clamp: 16; line-clamp: 16; }
 .rank-why-section strong { color: var(--artifact-text-primary); font-weight: 650; }
-.rank-rationale { display: grid; grid-template-columns: 1fr; gap: .52cqw; min-height: 0; max-height: 11.5cqw; flex-shrink: 0; align-items: stretch; }
-.rank-rationale-box { border: .08cqw solid var(--artifact-border-light); border-radius: .48cqw; background: var(--artifact-background-light); padding: .72cqw .85cqw; display: grid; gap: .24cqw; align-content: start; min-height: 0; overflow: hidden; }
-.rank-rationale-box h3 { font-size: .74cqw; text-transform: uppercase; letter-spacing: .08em; font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; color: var(--artifact-primary-brand); margin: 0 0 .28cqw; }
-.rank-rationale-box p { margin: 0; font-size: .72cqw; line-height: 1.38; color: var(--artifact-text-secondary); }
+.rank-rationale { display: grid; grid-template-columns: 1fr; gap: .28cqw; min-height: 0; max-height: 7.8cqw; flex-shrink: 0; align-items: stretch; }
+.rank-rationale-box { border: .08cqw solid var(--artifact-border-light); border-radius: .45cqw; background: var(--artifact-background-light); padding: .52cqw .72cqw; display: grid; gap: .18cqw; align-content: start; min-height: 0; overflow: hidden; }
+.rank-rationale-box h3 { font-size: .62cqw; text-transform: uppercase; letter-spacing: .08em; font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; color: var(--artifact-primary-brand); margin: 0 0 .2cqw; }
+.rank-rationale-box p { margin: 0; font-size: .58cqw; line-height: 1.32; color: var(--artifact-text-secondary); }
 
 .rank-card { cursor: pointer; transition: box-shadow .18s ease; }
 .rank-card:hover:not(.is-focused) { box-shadow: 0 .28cqw .85cqw rgba(15, 23, 42, .09); }
