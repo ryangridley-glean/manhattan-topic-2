@@ -321,22 +321,21 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 .territory-framework ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .15cqw; }
 .territory-framework li { font-size: .56cqw; color: var(--artifact-text-primary); padding-left: .74cqw; position: relative; line-height: 1.2; }
 .territory-framework li::before { content: ''; position: absolute; left: 0; top: .42em; width: .3cqw; height: .3cqw; border-radius: 50%; background: var(--artifact-primary-brand); }
-.rank-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-template-rows: 2cqw auto auto auto .96fr 1fr 1fr 1.28fr; column-gap: .58cqw; row-gap: .11cqw; min-height: 0; height: 100%; align-content: stretch; }
-.rank-card { border: .08cqw solid var(--artifact-border-light); border-radius: .48cqw; background: var(--artifact-background-light); padding: .46cqw .52cqw; display: grid; grid-template-rows: subgrid; grid-row: 1 / -1; gap: 0; min-width: 0; min-height: 0; overflow: hidden; border-top: .18cqw solid var(--artifact-primary-brand); }
+.rank-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-template-rows: 2.1cqw minmax(1.12cqw, auto) minmax(.78cqw, auto) minmax(.95cqw, auto) repeat(4, minmax(0, 1fr)); column-gap: .58cqw; row-gap: 0; min-height: 0; height: 100%; align-content: stretch; }
+.rank-card { border: .08cqw solid var(--artifact-border-light); border-radius: .48cqw; background: var(--artifact-background-light); padding: .5cqw .54cqw .54cqw; display: grid; grid-template-rows: subgrid; grid-row: 1 / -1; gap: 0; min-width: 0; min-height: 0; overflow: hidden; border-top: .18cqw solid var(--artifact-primary-brand); }
 .rank-card.is-top { background: var(--artifact-surface); box-shadow: 0 .45cqw 1.35cqw rgba(15, 23, 42, .07); }
-.rank-card-intro { display: flex; align-items: center; gap: .34cqw; min-width: 0; height: 100%; max-height: 2cqw; }
-.rank-logo-slot { flex: 1 1 auto; height: 1.68cqw; min-width: 0; display: flex; align-items: center; }
+.rank-card-intro { display: flex; align-items: center; gap: .34cqw; min-width: 0; height: 100%; max-height: 2.1cqw; align-self: center; }
+.rank-logo-slot { flex: 1 1 auto; height: 1.72cqw; min-width: 0; display: flex; align-items: center; }
 .rank-logo { height: 100%; width: auto; max-width: 100%; object-fit: contain; object-position: left center; display: block; }
-.rank-num { flex: 0 0 auto; width: 1.28cqw; height: 1.28cqw; border-radius: 50%; display: grid; place-items: center; background: var(--artifact-primary-brand); color: var(--artifact-text-inverse); font-size: .66cqw; font-weight: 700; }
-.company-name { font-size: .8cqw; font-weight: 650; line-height: 1.07; color: var(--artifact-text-primary); align-self: center; min-height: 0; }
-.industry { font-size: .48cqw; color: var(--artifact-primary-brand); text-transform: uppercase; letter-spacing: .05em; font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; line-height: 1.09; align-self: center; min-height: 0; }
-.stat-row { display: flex; flex-wrap: nowrap; align-items: baseline; gap: .11cqw .16cqw; margin: 0; padding: 0 0 .07cqw; border-bottom: .06cqw solid var(--artifact-border-light); align-self: center; min-height: 0; }
-.stat { font-size: .46cqw; line-height: 1.05; color: var(--artifact-text-secondary); white-space: nowrap; }
-.stat strong { font-size: .48cqw; color: var(--artifact-text-primary); font-weight: 650; }
-.rank-why-section { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: .07cqw; min-width: 0; min-height: 0; height: 100%; align-self: stretch; padding-top: .05cqw; overflow: hidden; }
-.rank-why-kicker { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .44cqw; letter-spacing: .08em; text-transform: uppercase; color: var(--artifact-primary-brand); line-height: 1.07; flex-shrink: 0; }
-.rank-why-section p { margin: 0; font-size: .47cqw; line-height: 1.15; color: var(--artifact-text-secondary); overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 10; line-clamp: 10; }
-.rank-why-section:last-child p { -webkit-line-clamp: 13; line-clamp: 13; }
+.rank-num { flex: 0 0 auto; width: 1.32cqw; height: 1.32cqw; border-radius: 50%; display: grid; place-items: center; background: var(--artifact-primary-brand); color: var(--artifact-text-inverse); font-size: .68cqw; font-weight: 700; }
+.company-name { font-size: .92cqw; font-weight: 650; line-height: 1.1; color: var(--artifact-text-primary); align-self: end; min-height: 0; padding-bottom: .04cqw; }
+.industry { font-size: .54cqw; color: var(--artifact-primary-brand); text-transform: uppercase; letter-spacing: .06em; font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; line-height: 1.12; align-self: start; min-height: 0; }
+.stat-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .12cqw .18cqw; margin: 0; padding: .06cqw 0 .14cqw; border-bottom: .06cqw solid var(--artifact-border-light); align-self: start; min-height: 0; width: 100%; }
+.stat { font-size: .5cqw; line-height: 1.12; color: var(--artifact-text-secondary); white-space: nowrap; }
+.stat strong { font-size: .54cqw; color: var(--artifact-text-primary); font-weight: 650; }
+.rank-why-section { display: flex; flex-direction: column; gap: .12cqw; min-width: 0; min-height: 0; height: 100%; align-self: stretch; padding: .18cqw 0 0; overflow: hidden; border-top: .05cqw solid rgba(15, 23, 42, .08); }
+.rank-why-kicker { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .48cqw; letter-spacing: .09em; text-transform: uppercase; color: var(--artifact-primary-brand); line-height: 1.1; flex: 0 0 auto; }
+.rank-why-section p { margin: 0; font-size: .5cqw; line-height: 1.22; color: var(--artifact-text-secondary); overflow: hidden; flex: 1 1 auto; min-height: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 8; line-clamp: 8; }
 .rank-why-section strong { color: var(--artifact-text-primary); font-weight: 650; }
 .rank-rationale { display: grid; grid-template-columns: 1fr; gap: .32cqw; min-height: 0; max-height: 8.4cqw; flex-shrink: 0; align-items: stretch; }
 .rank-rationale-box { border: .08cqw solid var(--artifact-border-light); border-radius: .46cqw; background: var(--artifact-background-light); padding: .58cqw .76cqw; display: grid; gap: .2cqw; align-content: start; min-height: 0; overflow: hidden; }
