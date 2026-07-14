@@ -443,7 +443,7 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 .pg-plan-slide .slide-body { inset: 3.2cqw 4.2cqw 2.8cqw; gap: .75cqw; }
 .pg-plan-slide h1 { font-size: 2.35cqw; max-width: 24ch; }
 .pg-plan-slide .title-lede { font-size: .8cqw; line-height: 1.32; color: var(--artifact-text-secondary); max-width: 62ch; margin-top: .18cqw; }
-.pg-plan-slide .slide-main { grid-template-rows: auto minmax(0, 1fr); align-content: stretch; gap: .75cqw; }
+.pg-plan-slide .slide-main { grid-template-rows: auto auto minmax(0, 1fr); align-content: stretch; gap: .6cqw; }
 .pg-kpi-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .55cqw; }
 .pg-kpi { border: .08cqw solid var(--artifact-border-light); border-radius: .45cqw; background: var(--artifact-selected); padding: .55cqw .62cqw; display: grid; gap: .12cqw; min-width: 0; }
 .pg-kpi .val { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: 1.35cqw; font-weight: 700; color: var(--artifact-primary-brand); line-height: 1; }
@@ -455,12 +455,97 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 .pg-step::after { content: '→'; position: absolute; right: -.34cqw; top: 50%; transform: translateY(-50%); font-size: .72cqw; color: var(--artifact-text-secondary); z-index: 1; }
 .pg-step:last-child::after { content: none; }
 .pg-step .num { width: 1.15cqw; height: 1.15cqw; border-radius: 50%; display: grid; place-items: center; font-size: .56cqw; font-weight: 700; background: var(--artifact-primary-brand); color: #fff; }
-.pg-step strong { font-size: .68cqw; line-height: 1.22; color: var(--artifact-text-primary); font-weight: 650; }
-.pg-step span { font-size: .56cqw; line-height: 1.28; color: var(--artifact-text-secondary); }
+.pg-step strong { font-size: .64cqw; line-height: 1.2; color: var(--artifact-text-primary); font-weight: 650; }
+.pg-step span { font-size: .52cqw; line-height: 1.26; color: var(--artifact-text-secondary); }
 .pg-funnel { display: grid; grid-template-columns: 1.2fr auto 1.2fr auto 1.2fr auto 1.2fr; gap: .25cqw; align-items: center; margin-bottom: .15cqw; }
 .pg-funnel .node { text-align: center; font-size: .56cqw; line-height: 1.25; color: var(--artifact-text-secondary); padding: .32cqw .35cqw; border-radius: .35cqw; background: rgba(0,0,0,.03); }
 .pg-funnel .node strong { display: block; font-size: .78cqw; color: var(--artifact-text-primary); margin-bottom: .06cqw; }
 .pg-funnel .arrow { text-align: center; font-size: .8cqw; color: var(--artifact-text-secondary); }
+
+.pg-research-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  gap: .65cqw;
+  border: .08cqw solid var(--artifact-border-light);
+  border-radius: .5cqw;
+  background: var(--artifact-selected);
+  padding: .62cqw .7cqw;
+  align-items: center;
+}
+.pg-5x5-head { display: grid; gap: .35cqw; }
+.pg-5x5-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .35cqw;
+  font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace;
+  font-weight: 700;
+  color: var(--artifact-primary-brand);
+  line-height: 1;
+}
+.pg-5x5-badge .big { font-size: 2.1cqw; }
+.pg-5x5-badge .x { font-size: 1.1cqw; opacity: .55; }
+.pg-5x5-badge .sub { font-size: .72cqw; font-weight: 650; color: var(--artifact-text-primary); font-family: inherit; }
+.pg-5x5-head p { font-size: .62cqw; line-height: 1.35; color: var(--artifact-text-secondary); max-width: 38ch; margin: 0; }
+.pg-5x5-matrix {
+  display: grid;
+  grid-template-columns: 3.2cqw repeat(5, minmax(0, 1fr));
+  grid-template-rows: auto repeat(5, minmax(0, 1fr));
+  gap: .18cqw;
+  min-height: 0;
+}
+.pg-5x5-matrix .corner { font-size: .48cqw; }
+.pg-5x5-matrix .col-h,
+.pg-5x5-matrix .row-h {
+  font-size: .48cqw;
+  font-weight: 650;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--artifact-text-secondary);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  line-height: 1.15;
+}
+.pg-5x5-matrix .row-h { justify-items: start; padding-left: .1cqw; }
+.pg-5x5-cell {
+  aspect-ratio: 1;
+  border-radius: .28cqw;
+  border: .06cqw solid rgba(0,0,0,.08);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  font-size: .44cqw;
+  font-weight: 600;
+  color: var(--artifact-text-secondary);
+  min-width: 0;
+}
+.pg-5x5-cell.is-core {
+  background: rgba(10, 102, 194, .08);
+  border-color: rgba(10, 102, 194, .22);
+  color: var(--artifact-primary-brand);
+}
+.pg-5x5-outcomes {
+  display: grid;
+  gap: .38cqw;
+}
+.pg-5x5-outcome {
+  border: .06cqw solid var(--artifact-border-light);
+  border-radius: .38cqw;
+  background: #fff;
+  padding: .42cqw .5cqw;
+}
+.pg-5x5-outcome strong {
+  display: block;
+  font-size: .62cqw;
+  font-weight: 650;
+  color: var(--artifact-text-primary);
+  margin-bottom: .12cqw;
+}
+.pg-5x5-outcome span {
+  font-size: .56cqw;
+  line-height: 1.32;
+  color: var(--artifact-text-secondary);
+}
 
 @media print{.pov-slide .pov-card{opacity:1!important;transform:none!important;filter:none!important;box-shadow:none!important}.pov-slide .pov-card-body,.pov-slide .pov-proof{opacity:1!important}}
 
@@ -765,6 +850,26 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 <div class="pg-kpi"><div class="val">4%</div><div class="lbl">Conversion rate</div></div>
 <div class="pg-kpi"><div class="val">2</div><div class="lbl">Pipe adds / week</div></div>
 </div>
+<div class="pg-research-wrap" aria-label="5 by 5 account research">
+<div class="pg-5x5-head">
+<div class="pg-5x5-badge"><span class="big">5</span><span class="x">×</span><span class="big">5</span><span class="sub">account research</span></div>
+<p>Five priority accounts, five key contacts each — deep research on every cell before outreach.</p>
+<div class="pg-5x5-matrix" aria-hidden="true">
+<span class="corner"></span>
+<span class="col-h">C1</span><span class="col-h">C2</span><span class="col-h">C3</span><span class="col-h">C4</span><span class="col-h">C5</span>
+<span class="row-h">Acct 1</span><span class="pg-5x5-cell is-core"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span>
+<span class="row-h">Acct 2</span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell is-core"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span>
+<span class="row-h">Acct 3</span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell is-core"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span>
+<span class="row-h">Acct 4</span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell is-core"></span><span class="pg-5x5-cell"></span>
+<span class="row-h">Acct 5</span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell"></span><span class="pg-5x5-cell is-core"></span>
+</div>
+</div>
+<div class="pg-5x5-outcomes">
+<div class="pg-5x5-outcome"><strong>Per account</strong><span>Strategic initiatives, public priorities, and where Cursor maps to their 2026 agenda.</span></div>
+<div class="pg-5x5-outcome"><strong>Per contact</strong><span>Role, remit, and angle — research tied to how that person owns those initiatives.</span></div>
+<div class="pg-5x5-outcome"><strong>Output</strong><span>POV + outreach per contact — tailored notes, not generic sequences.</span></div>
+</div>
+</div>
 <div class="pg-flow-wrap">
 <div class="pg-flow-label">Account process flow</div>
 <div class="pg-funnel" aria-hidden="true">
@@ -779,10 +884,11 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 <div class="pg-flow">
 <article class="pg-step"><div class="num">1</div><strong>Strategic initiatives</strong><span>Identify business priorities driving spend &amp; urgency</span></article>
 <article class="pg-step"><div class="num">2</div><strong>Map the org</strong><span>Chart buyers, champions, blockers &amp; reporting lines</span></article>
-<article class="pg-step"><div class="num">3</div><strong>Build POV</strong><span>Cursor point of view tailored for discovery</span></article>
-<article class="pg-step"><div class="num">4</div><strong>Metrics → pilot</strong><span>Define what gets us to a pilot &amp; how we measure it</span></article>
-<article class="pg-step"><div class="num">5</div><strong>Pilot value</strong><span>Deliver proof in production — velocity, cost, risk</span></article>
-<article class="pg-step"><div class="num">6</div><strong>Multi-thread</strong><span>Expand across R&amp;D, platform, security &amp; exec sponsors</span></article>
+<article class="pg-step"><div class="num">3</div><strong>Multi-thread</strong><span>Thread into the account across R&amp;D, platform, security &amp; exec</span></article>
+<article class="pg-step"><div class="num">4</div><strong>Build POV</strong><span>Cursor point of view tailored for discovery</span></article>
+<article class="pg-step"><div class="num">5</div><strong>Mutual action plan</strong><span>Build a mutual action plan with the customer</span></article>
+<article class="pg-step"><div class="num">6</div><strong>Metrics → pilot</strong><span>Define what gets us to a pilot &amp; how we measure it</span></article>
+<article class="pg-step"><div class="num">7</div><strong>Pilot value</strong><span>Deliver proof in production — velocity, cost, risk</span></article>
 </div>
 </div>
 </main>
