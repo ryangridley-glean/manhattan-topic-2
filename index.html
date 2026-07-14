@@ -439,6 +439,29 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 .linkedin-compose-foot { display: flex; align-items: center; justify-content: space-between; gap: .55cqw; padding: .5cqw .72cqw; border-top: .06cqw solid #e8e8e8; background: #fafafa; }
 .linkedin-send-btn { border: 0; border-radius: 2cqw; padding: .38cqw .95cqw; background: #0a66c2; color: #fff; font-size: .64cqw; font-weight: 650; opacity: .55; cursor: default; }
 .compose-hint { font-size: .54cqw; color: #666; font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; }
+
+.pg-plan-slide .slide-body { inset: 3.2cqw 4.2cqw 2.8cqw; gap: .75cqw; }
+.pg-plan-slide h1 { font-size: 2.35cqw; max-width: 24ch; }
+.pg-plan-slide .title-lede { font-size: .8cqw; line-height: 1.32; color: var(--artifact-text-secondary); max-width: 62ch; margin-top: .18cqw; }
+.pg-plan-slide .slide-main { grid-template-rows: auto minmax(0, 1fr); align-content: stretch; gap: .75cqw; }
+.pg-kpi-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .55cqw; }
+.pg-kpi { border: .08cqw solid var(--artifact-border-light); border-radius: .45cqw; background: var(--artifact-selected); padding: .55cqw .62cqw; display: grid; gap: .12cqw; min-width: 0; }
+.pg-kpi .val { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: 1.35cqw; font-weight: 700; color: var(--artifact-primary-brand); line-height: 1; }
+.pg-kpi .lbl { font-size: .62cqw; line-height: 1.28; color: var(--artifact-text-secondary); }
+.pg-flow-wrap { border: .08cqw solid var(--artifact-border-light); border-radius: .5cqw; background: #fff; padding: .72cqw .75cqw; display: grid; gap: .55cqw; min-height: 0; align-content: center; }
+.pg-flow-label { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .56cqw; letter-spacing: .08em; text-transform: uppercase; color: var(--artifact-primary-brand); }
+.pg-flow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .42cqw; align-items: stretch; }
+.pg-step { border: .08cqw solid var(--artifact-border-light); border-radius: .42cqw; padding: .55cqw .5cqw; background: var(--artifact-surface); display: grid; gap: .28cqw; position: relative; min-width: 0; }
+.pg-step::after { content: '→'; position: absolute; right: -.34cqw; top: 50%; transform: translateY(-50%); font-size: .72cqw; color: var(--artifact-text-secondary); z-index: 1; }
+.pg-step:last-child::after { content: none; }
+.pg-step .num { width: 1.15cqw; height: 1.15cqw; border-radius: 50%; display: grid; place-items: center; font-size: .56cqw; font-weight: 700; background: var(--artifact-primary-brand); color: #fff; }
+.pg-step strong { font-size: .68cqw; line-height: 1.22; color: var(--artifact-text-primary); font-weight: 650; }
+.pg-step span { font-size: .56cqw; line-height: 1.28; color: var(--artifact-text-secondary); }
+.pg-funnel { display: grid; grid-template-columns: 1.2fr auto 1.2fr auto 1.2fr auto 1.2fr; gap: .25cqw; align-items: center; margin-bottom: .15cqw; }
+.pg-funnel .node { text-align: center; font-size: .56cqw; line-height: 1.25; color: var(--artifact-text-secondary); padding: .32cqw .35cqw; border-radius: .35cqw; background: rgba(0,0,0,.03); }
+.pg-funnel .node strong { display: block; font-size: .78cqw; color: var(--artifact-text-primary); margin-bottom: .06cqw; }
+.pg-funnel .arrow { text-align: center; font-size: .8cqw; color: var(--artifact-text-secondary); }
+
 @media print{.pov-slide .pov-card{opacity:1!important;transform:none!important;filter:none!important;box-shadow:none!important}.pov-slide .pov-card-body,.pov-slide .pov-proof{opacity:1!important}}
 
 </style>
@@ -719,6 +742,50 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 </div>
 </div>
 </main>
+
+<section class="slide pg-plan-slide" data-slide="pg-plan">
+<div class="slide-body">
+<header class="slide-head">
+<div class="title-row">
+<div>
+<div class="eyebrow">AE Challenge · Ryan&apos;s PG plan</div>
+<h1>Weekly targets &amp; account motion</h1>
+<p class="title-lede">How I run pipeline — from strategic research through pilot value and multi-threading.</p>
+</div>
+</div>
+</header>
+<main class="slide-main">
+<div class="pg-kpi-row" aria-label="Weekly PG targets">
+<div class="pg-kpi"><div class="val">100</div><div class="lbl">Touchpoints / week</div></div>
+<div class="pg-kpi"><div class="val">4</div><div class="lbl">Meetings / week</div></div>
+<div class="pg-kpi"><div class="val">4%</div><div class="lbl">Conversion rate</div></div>
+<div class="pg-kpi"><div class="val">2</div><div class="lbl">Pipe adds / week</div></div>
+</div>
+<div class="pg-flow-wrap">
+<div class="pg-flow-label">Account process flow</div>
+<div class="pg-funnel" aria-hidden="true">
+<div class="node"><strong>100</strong>touchpoints</div>
+<div class="arrow">→</div>
+<div class="node"><strong>4</strong>meetings</div>
+<div class="arrow">→</div>
+<div class="node"><strong>4%</strong>convert</div>
+<div class="arrow">→</div>
+<div class="node"><strong>2</strong>pipe adds</div>
+</div>
+<div class="pg-flow">
+<article class="pg-step"><div class="num">1</div><strong>Strategic initiatives</strong><span>Identify business priorities driving spend &amp; urgency</span></article>
+<article class="pg-step"><div class="num">2</div><strong>Map the org</strong><span>Chart buyers, champions, blockers &amp; reporting lines</span></article>
+<article class="pg-step"><div class="num">3</div><strong>Build POV</strong><span>Cursor point of view tailored for discovery</span></article>
+<article class="pg-step"><div class="num">4</div><strong>Metrics → pilot</strong><span>Define what gets us to a pilot &amp; how we measure it</span></article>
+<article class="pg-step"><div class="num">5</div><strong>Pilot value</strong><span>Deliver proof in production — velocity, cost, risk</span></article>
+<article class="pg-step"><div class="num">6</div><strong>Multi-thread</strong><span>Expand across R&amp;D, platform, security &amp; exec sponsors</span></article>
+</div>
+</div>
+</main>
+<footer class="slide-foot"><span class="source">Ryan Gridley · PG plan targets &amp; enterprise sales motion</span><span class="pgnum">12</span></footer>
+</div>
+</section>
+
 <footer class="slide-foot"><span class="source">Sources: Sanjeev Siotia LinkedIn post; Manhattan Active Platform, Active Agents (Jan 2026 GA), and Agent Foundry product pages (manh.com)</span><span class="pgnum">11 · TOPIC 3</span></footer>
 </div>
 </section>
