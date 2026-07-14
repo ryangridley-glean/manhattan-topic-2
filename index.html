@@ -334,11 +334,11 @@ p, li { font-size: 1.07cqw; line-height: 1.45; }
 .stat-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .14cqw .2cqw; margin: 0; padding: 0; border-bottom: 0; min-height: 0; width: 100%; }
 .stat { font-size: .58cqw; line-height: 1.14; color: var(--artifact-text-secondary); white-space: nowrap; }
 .stat strong { font-size: .62cqw; color: var(--artifact-text-primary); font-weight: 650; }
-.rank-why-section { display: flex; flex-direction: column; gap: .08cqw; min-width: 0; min-height: 0; height: 100%; align-self: stretch; padding: 0; overflow: hidden; border-top: 0; }
-.rank-why-section + .rank-why-section { margin-top: 0; padding-top: .1cqw; border-top: .04cqw solid rgba(15, 23, 42, .1); }
-.rank-why-section:first-of-type { padding-top: .12cqw; }
-.rank-why-kicker { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .6cqw; letter-spacing: .09em; text-transform: uppercase; color: var(--artifact-primary-brand); line-height: 1.1; flex: 0 0 auto; }
-.rank-why-section p { margin: 0; font-size: .68cqw; line-height: 1.26; color: var(--artifact-text-secondary); overflow: hidden; flex: 1 1 auto; min-height: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 14; line-clamp: 14; }
+.rank-why-section { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: .06cqw; min-width: 0; min-height: 0; max-height: 100%; height: 100%; align-self: stretch; overflow: hidden; box-sizing: border-box; border-top: 0; padding: .08cqw 0 0; }
+.rank-why-section + .rank-why-section { padding-top: .1cqw; border-top: .04cqw solid rgba(15, 23, 42, .1); }
+.rank-why-section:first-of-type { padding-top: .1cqw; }
+.rank-why-kicker { font-family: "SF Mono", "IBM Plex Mono", Consolas, monospace; font-size: .58cqw; letter-spacing: .09em; text-transform: uppercase; color: var(--artifact-primary-brand); line-height: 1.12; min-height: 0; overflow: hidden; }
+.rank-why-section p { margin: 0; font-size: .64cqw; line-height: 1.22; color: var(--artifact-text-secondary); overflow: hidden; min-height: 0; max-height: 100%; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 7; line-clamp: 7; }
 .rank-why-section strong { color: var(--artifact-text-primary); font-weight: 650; }
 .rank-rationale { display: grid; grid-template-columns: 1fr; gap: .32cqw; min-height: 0; max-height: 7.6cqw; flex-shrink: 0; align-items: stretch; }
 .rank-rationale-box { border: .08cqw solid var(--artifact-border-light); border-radius: .46cqw; background: var(--artifact-background-light); padding: .58cqw .76cqw; display: grid; gap: .2cqw; align-content: start; min-height: 0; overflow: hidden; }
